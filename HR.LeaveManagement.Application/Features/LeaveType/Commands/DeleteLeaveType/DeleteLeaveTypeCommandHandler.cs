@@ -1,13 +1,7 @@
 ﻿using AutoMapper;
 using HR.LeaveManagement.Application.Contracts.Persistence;
 using HR.LeaveManagement.Application.Exceptions;
-using HR.LeaveManagement.Application.Features.LeaveType.Commands.DeleteLeaveType;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HR.LeaveManagement.Application.Features.LeaveType.Commands.DeleteLeaveType
 {
@@ -19,6 +13,8 @@ namespace HR.LeaveManagement.Application.Features.LeaveType.Commands.DeleteLeave
 
         public async Task<Unit> Handle(DeleteLeaveTypeCommand request, CancellationToken cancellationToken)
         {
+            //Validate incoming data
+
             //retrive domain entity object
             var leaveTypeToDelete = await _leaveTypeRepository.GetByIdAsync(request.Id);
 
