@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\HR.LeaveManagement.Api.props" />
-</Project>

@@ -32,7 +32,7 @@ public class LeaveAllocationsController : ControllerBase
     [HttpGet("{id}")]
     public async Task<ActionResult<LeaveAllocationDetailDto>> Get(int id)
     {
-        var leaveAllocation = await _mediator.Send(new GetLeaveAllocationDetailRequestQuery { Id = id });
+        var leaveAllocation = await _mediator.Send(new GetLeaveAllocationDetailQuery { Id = id });
         return Ok(leaveAllocation);
     }
 

@@ -50,7 +50,7 @@ namespace HR.LeaveManagement.Api.Controllers
             var response = await _mediator.Send(leaveType);
             return CreatedAtAction(nameof(Get), new { id = response });
         }
-
+        
         // PUT api/<LeaveTypesController>
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
